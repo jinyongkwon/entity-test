@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 import site.metacoding.entitytest.web.dto.BoardDetailRespDto;
 
 @RequiredArgsConstructor
-public class BoardJQPLRepositoryImpl implements BoardJQPLRepository {
+public class BoardJPQLRepositoryImpl implements BoardJPQLRepository {
     // interface는 변수가 전부 static이라 변수를 만들수가 없다.
 
     private final EntityManager em;
@@ -29,7 +29,6 @@ public class BoardJQPLRepositoryImpl implements BoardJQPLRepository {
         String title = (String) result[1];
         String content = (String) result[2];
         boolean isLove = (boolean) result[3];
-
         BoardDetailRespDto dto = new BoardDetailRespDto(boardId, title, content, isLove);
         return dto;
     }

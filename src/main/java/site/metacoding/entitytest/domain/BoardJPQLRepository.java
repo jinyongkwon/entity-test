@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import site.metacoding.entitytest.web.dto.BoardDetailRespDto;
 
 @Repository
-public interface BoardJQPLRepository {
+public interface BoardJPQLRepository {
     BoardDetailRespDto mFindDetail(Integer id);
 
     List<BoardDetailRespDto> mFindAll();
